@@ -17,8 +17,12 @@ all-features = true
 kb = ["keyboard-types"]
 
 [dependencies.winapi]
-version = "0.3.8"
+version = "0.3.9"
 features = ["winuser"]
+# use deepsign winapi fork to avoid using different library versions
+git = "https://github.com/DeepSignSecurity/winapi-rs.git"
+branch = "0.3"
+package = "winapi"
 
 [dependencies.keyboard-types]
 version = "0.5.0"
